@@ -142,7 +142,7 @@ void tcc_init(){
 	TCC0.CNT = 0;
 	TCC0.PER = (32E6) / (denom) ; //less than 2^16 so PRE=1
 /*	TCC0.INTCTRLA = TC_OVFINTLVL_LO_gc;*/
-/*	TCC0.CTRLD = TC_EVACT_RESTART_gc | TC_EVSEL_CH1_gc;*/
+/*	TCC0.CTRLD = TC_EVACT_RESTART_gc | TC_EVSEL_CH1_gc;*/ 
 
 	//enable tcc0
 	TCC0.CTRLA = TC_CLKSEL_DIV1_gc;
