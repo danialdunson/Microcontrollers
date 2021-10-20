@@ -37,9 +37,11 @@ int main(void){
 
 			PORTF.OUTCLR = SPI_SS; //enable slave
 			volatile uint8_t IMURAW[13];
-//fetch that IMU data.
+//send that IMU data
+			//The SPI timing suffered throughput losses when implementing more readable code here because the optimazation is set to C0.
+			//The IMU is a 2byte frame and the MCU can only send only 8 bit frames.
 			uint8_t i;
-			for (i=0;i<14;i++) //function call = slower though
+			for (i=0;i<14;i++) 
 			{
 				if (i<2) { //send first 2 address requests
 					while( !(SPIF.STATUS& 1<<7) ); //Wait to start next read cycle
