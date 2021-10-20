@@ -1,9 +1,14 @@
-/*
- * lab8_5.c
- *
- * Created: 4/9/2021 1:56:18 PM
- *  Author: Danial Dunson
- */ 
+/************************************************************************
+  Created: 4/9/2021 1:56:18 PM
+  lab7_5.c
+	
+  Description:
+    Outputs an analog sinwave via Direct Memory Access based on the 
+    keypress inside an SSH terminal. 2 Interrupt Service Routines are 
+    used to detect the keypress and discontinue the ouput. 
+
+  Author: Danial Dunson                                                                  
+************************************************************************/
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "coswave.h"
