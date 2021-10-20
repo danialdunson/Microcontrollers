@@ -1,3 +1,12 @@
+/************************************************************************
+	lab7_5.c
+	
+  Description:
+    After converting the sampled ADC value to a decimal voltage, the 
+    microcontroller sends a display text to a ssh terminal via usart. 
+  
+  Author: Danial Dunson                                                                  
+************************************************************************/
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "usart.h"
